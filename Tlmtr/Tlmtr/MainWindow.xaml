@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tlmtr"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="Tlmtr" Height="350" Width="525">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Fájl" >
+                <MenuItem Header="Megnyitás" Click="MenuItem_Click" />
+                <MenuItem Header="Mentés" />
+                <MenuItem Header="Bezár" />
+            </MenuItem>
+            <MenuItem Header="Szerkesztés" />
+            <MenuItem x:Name="miCsatlakozas" Header="Csatlakozás"   >
+                <MenuItem.Icon>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    &#xE768;
+                    </TextBlock>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="miKapcsolatbontas" Header="Szétkapcsolás"   IsEnabled="False"  >
+                <MenuItem.Icon>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    &#xE769;
+                    </TextBlock>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="Beállítások" />
+            <MenuItem Header="Consol" />
+        </Menu>
+        <TabControl Grid.Row="1" Margin="2" >
+            
+        </TabControl>
+        <!-- Footer -->
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <TextBlock Text="Copyright © Csupor Dániel 2016"  Foreground="White"/>
         
+
+        </StackPanel>
     </Grid>
 </Window>
